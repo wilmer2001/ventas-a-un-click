@@ -1,0 +1,130 @@
+*{
+	margin:1em;
+	padding: 1em;
+
+}
+#contenedor{
+	width: 1300px;
+	height: 1000px;
+	background: #424242;
+	margin: 0.5em auto;
+	border-radius: 1em;
+	border-top: 6px solid #424242;
+}
+#contenido{
+	height:68%;
+	background: #424242;
+}
+#footer{
+	height: 27%;
+	background: #A70D17;
+	border-radius: 1em;
+	margin: 0.5em;
+}
+#section{
+	height: 96%;
+	width: 60%;
+	background: #CB0F1B;
+	border-radius: 1em;
+	float: left;
+}
+#aside{
+	height: 96%;
+	width: 29%;
+	background: #CB0F1B;
+	border-radius: 1em;
+	margin: 1em;
+	float: right;
+}
+#recomendacion{
+	width: 670px;
+	height: 25%;
+	border-radius: 1em;
+	background: #C2C7D6;
+	position: relative;
+	bottom: 30px;
+	left: 10px;
+}
+#nombres{
+	background: #C2C7D6;
+	width: 670px;
+	position: relative;
+	bottom: 30px;
+	left: 10px;
+}
+#buzon{
+	height: 200px;
+	width: 700px;
+	position: relative;
+	right: 20px;
+}
+#logo{
+	width: 300px;
+	height: 250px;
+	border-radius: 60%;
+	position: relative;
+	bottom: 30px;
+}
+#ejemplo{
+	height: 90%;
+	width: 90%;
+}
+#ejemplo img{
+	float: left;
+	height: 250px;
+	width: 350px;
+	margin-bottom: 20px;
+	border-radius: 15%;
+	position: relative;
+	bottom: 50px;
+	right: 50px;
+}
+#ejemplo p{
+	font-size: 18px;
+	font-weight: 600;
+	position: relative;
+	bottom: 120px;
+	right: 40px;
+}
+#h1{
+	font-size: 25px;
+	position: relative;
+	bottom: 30px;
+}
+#body{
+	background: #A09090;
+}
+#subtitulo{
+	font-size: 40px;
+	font-weight: 400;
+	position: relative;
+	bottom: 70px;
+	left: 150px;
+}
+#descripcion{
+	background: #C2C7D6;
+	position: relative;
+	bottom: 40px;
+}
+#mision{
+	background: #C2C7D6;
+	position: relative;
+	bottom: 40px;
+}
+#vision{
+	background: #C2C7D6;
+	position: relative;
+	bottom: 40px;
+}
+#bnombres{
+	position: relative;
+	bottom: 30px;
+	right: 20px;
+	font-size: 18px;
+}
+#brecomendacion{
+	position: relative;
+	bottom: 30px;
+	right: 20px;
+	font-size: 18px;	
+}
