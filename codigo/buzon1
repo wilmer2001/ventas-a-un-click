@@ -248,7 +248,7 @@ footer {
  </div>
   <img src="https://previews.123rf.com/images/asmati/asmati1610/asmati161000043/63402497-mano-haga-clic-en-el-bot%C3%B3n-el-icono-blanco-en-el-c%C3%ADrculo-rojo-.jpg" width="50" height="50" align="right" >
 <h2><center>Ventas a un click</center></h2>
-<a class="boton_personalizado" href="http://localhost/ventas-a-un-click-master/codigo/index">Inicio</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click-master/codigo/producto1">Productos</a><a class="boton_personalizado" href="">Buzon de emergencia</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click-master/codigo/empresa">Perfil de la empresa</a>
+<a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/index">Inicio</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/producto1">Productos</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/buzon1">Buzon de emergencia</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/empresa">Perfil de la empresa</a>
 </header>
 <body id="body">
   <br>

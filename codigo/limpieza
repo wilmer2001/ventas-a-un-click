@@ -104,6 +104,12 @@ ul, li {
     margin: 0;
     list-style: none;
 }
+.social1{
+      width:48px;
+      top:50px;
+      right:0;
+    }
+
 .social{
       width:48px;
       position:fixed;
@@ -151,10 +157,12 @@ footer {
  </div>
   <img src="https://previews.123rf.com/images/asmati/asmati1610/asmati161000043/63402497-mano-haga-clic-en-el-bot%C3%B3n-el-icono-blanco-en-el-c%C3%ADrculo-rojo-.jpg" width="50" height="50" align="right" >
 <h2><center>Ventas a un click</center></h2>
-<a class="boton_personalizado" href="http://localhost/ventas-a-un-click-master/codigo/index">Inicio</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click-master/codigo/producto1">Productos</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click-master/codigo/buzon1">Buzon de emergencia</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click-master/codigo/empresa">Perfil de la empresa</a>
+<a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/index">Inicio</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/producto1">Productos</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/buzon1">Buzon de emergencia</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/empresa">Perfil de la empresa</a>
 </header>
    <div class="container">
- <h1><center>LIMPIEZA</h1></center><br><br>
+   <div class="social1">
+    <li><a href="http://localhost/ventas-a-un-click/codigo/producto1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWHRqEeNhV626naOsEN08bZL5ovJUnthKmDw&usqp=CAU" width="30" height="30" alt="facebook"></li>
+  </div></a><h1><center>LIMPIEZA</h1></center><br><br>
    &nbsp&nbsp&nbsp&nbsp&nbsp<img src="https://metrocolombiafood.vteximg.com.br/arquivos/ids/282674-1000-1000/7702137441536.jpg?v=637340715499970000" class="imgRedondah">
    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="https://metrocolombiafood.vteximg.com.br/arquivos/ids/278835-1000-1000/7702155040650.jpg?v=637312048244330000" class="imgRedondah">
    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="https://metrocolombiafood.vteximg.com.br/arquivos/ids/277892-750-750/7702010310096.jpg?v=637305107807230000" class="imgRedondam">
@@ -242,7 +250,10 @@ footer {
   </article>
   <div class="container">
   </div>
-
+  <div class="social1">
+    <li><a href=""><img src="https://www.facebook.com/images/fb_icon_325x325.png" width="30" height="30" alt="facebook"></li>
+    
+  </div>
   <div class="social">
     <li><a href="#"><img src="https://www.facebook.com/images/fb_icon_325x325.png" width="30" height="30" alt="facebook"></li></a>
     <li><a href="#"><img src="https://i.blogs.es/5471fd/youtube/840_560.jpg" width="30" height="30" alt="youtube"></a></li>
