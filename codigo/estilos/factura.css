@@ -1,0 +1,70 @@
+#contenedor{
+	width: 810px;
+	height: 510px;
+	background: #D84141;
+	border-radius: 1em;
+	position: relative;
+	left: 400px;
+	top: 110px;
+}
+#h1{
+	text-align: center;
+	position: relative;
+	top: 100px;
+}
+#telefono{
+	width: 780px;
+	margin-left: 1em;
+}
+#cedula{
+	width: 780px;
+	margin-left: 1em;
+}
+#direccion{
+	width: 620px;
+	margin-left: 1em;
+}
+#nombre{
+	width: 620px;
+	margin-left: 1em;
+}
+#fecha{
+	width: 780px;
+	margin-left: 1em;
+}
+#credito{
+	margin-left: 1em;
+}
+#debito{
+	margin-left: 1em;
+}
+#confirmar{
+	margin-left: 1em;
+}
+#bnombre{
+	margin-left: 1em;
+}
+#bdireccion{
+	margin-left: 1em;
+}
+#btelefono{
+	margin-left: 1em;
+}
+#bidentificacion{
+	margin-left: 1em;
+}
+#bfecha{
+	margin-left: 1em;
+}
+#body{
+	background: #E12C2C;
+}
+#imagen{
+	width: 150px;
+	height: 150px;
+	float: right;
+	border-radius: 1em;
+	position: relative;
+	right: 10px;
+	top: 10px;
+}
