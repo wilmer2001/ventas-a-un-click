@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ventas a un click</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: red;
+  padding: 15px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+  .boton_personalizado{
+    text-decoration: none;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    color: red;
+    background-color:white ;
+    
+  }
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  height: 1300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  font: red;
+  padding: 10px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+.container{
+  margin: auto;
+  background-color: black;
+  width: 800px;
+  padding: 30px;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider{
+  position: relative;
+  width: 750px;
+  height: 300px;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+}
+
+ul.slider li img{
+  width: 70%;
+  height: 300px;
+  object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.menu{
+  text-align: center;
+  margin: 10px;
+}
+
+.menu li{
+  display: inline-block;
+  text-align: center;
+}
+
+.menu li a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: grey;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+    .social{
+      /*las imágenes usadas tienen width de 48px*/
+      width:48px;
+      position:fixed;
+      top:50px;
+      right:0;
+    }
+
+    /* Extra centrado vertical*/
+
+    .social{
+      /*border:1px solid #000;*/
+      top:50%;
+      height:205px;
+      /*para poner height 192 deberíamos haber indicado en el reset de estilos font-size:0;*/
+      margin-top:-100px;
+    }
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  height: 1300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <div align="center"><img src="https://previews.123rf.com/images/asmati/asmati1610/asmati161000043/63402497-mano-haga-clic-en-el-bot%C3%B3n-el-icono-blanco-en-el-c%C3%ADrculo-rojo-.jpg" width="200" height="100" ></div>
+<h2>Ventas a un click</h2>
+<a class="boton_personalizado" href="">Inicio</a>
+<a class="boton_personalizado" href="">Productos</a>
+<a class="boton_personalizado" href="">Buzon de emergencia</a>
+<a class="boton_personalizado" href="">Perfil de la empresa</a>
+</header>
+<section>
+  <nav>
+    <ul>
+      <li><H1> PRODUCTOS </H1></li>
+      <li>Los productos que manejamos son 100% colombianos, de excelente calidad, buen precio, teniendo como base unos grandes proovedores que siempre nos abastecen de muy buenos productos.</li>
+      <li><a href="#"><img src="https://telemedellin.tv/wp-content/uploads/2018/08/IVA.jpg" width="80" height="80"></a></li>
+      <li></li>
+    </ul>
+  </nav>
+  <article>
+  <div class="container"><center>
+  
+  <ul class="slider">
+    <li id="slide1">
+      <img src="https://image.slidesharecdn.com/productosdelacanastafamiliar-101118233934-phpapp01/95/productos-de-la-canasta-familiar-1-638.jpg?cb=1422673298"/>
+    </li>
+    <li id="slide2">
+      <img src="https://previews.123rf.com/images/dilendom/dilendom1708/dilendom170800150/84219515-un-conjunto-de-art%C3%ADculos-de-papeler%C3%ADa-para-escolares-productos-para-la-creatividad-y-el-estudio.jpg"/>
+    </li>
+    <li id="slide3">
+      <img src="https://dulceriaelcompadre.com/imgs/Categorias/nacionales_comprimido.jpg"/>
+    </li>
+    <li id="slide4">
+      <img src="https://3.bp.blogspot.com/-97Z5R998O18/T5pb6JezdxI/AAAAAAAAAEg/epJXCZFfbnw/s1600/productos_limpieza.jpg"/>
+    </li>
+    
+  </ul>
+  
+  <ul class="menu">
+    <li>
+      <a href="#slide1">1</a>
+    </li>
+    <li>
+      <a href="#slide2">2</a>
+    </li>
+     <li>
+      <a href="#slide3">3</a>
+    </li>
+    <li>
+      <a href="#slide4">4</a>
+    </li>
+  </ul>
+  </center>
+</div>
+<div class="container">
+    <!-- (p>lorem)*20 (código a usar si tienes instalada la extensión emmet)-->
+  </div>
+
+  <div class="social">
+    <li><a href="#"><img src="https://www.facebook.com/images/fb_icon_325x325.png" width="30" height="30" alt="facebook"></li></a>
+    <li><a href="#"><img src="https://i.blogs.es/5471fd/youtube/840_560.jpg" width="30" height="30" alt="youtube"></a></li>
+    <li><a href="#"><img src="https://play-lh.googleusercontent.com/h9jWMwqb-h9hjP4THqrJ50eIwPekjv7QPmTpA85gFQ10PjV02CoGAcYLLptqd19Sa1iJ" width="30" height="30" alt="instagram"></li></a>
+  </div>
+    <h1>Descripcion</h1>
+    <p>Brindamos la compra de productos de la canasta familiar, papeleria, dulceria, entre muchos productos mas a todo tipo de empresa ya sea tienda de barrio o grandes supermecados.</p>
+    <center><img src="https://www.elheraldo.co/sites/default/files/styles/width_860/public/articulo/2017/08/09/archivo.jpg?itok=_NmqTQQF" width="250" height="250"></center>
+    <h1>Objetivo</h1>
+    <p>Nuestro objetivo principal es incrementar un 10% las ventas a nuestra empresa, a traves de nuestro aplicativo web que facilita y controla la toma de los pedidos.</p>
+    <center><img src="https://actioncoachiberoamerica.com/wp-content/uploads/2018/12/Joaquin_Pardave-767x430.jpg" width="250" height="250"></center>
+  </article>
+</section>
+
+<footer>
+  <p><cente>Comercializadora maxitienda&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp5697898&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmark201680@gmail.com&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspKr8L#52a-34 sur Santa Lucia</center></p>
+</footer>
+
+</body>
+</html>

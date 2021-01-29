@@ -1,0 +1,23 @@
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  background-color: red;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+form {
+	background: rgba(0,0,0,0.05);
+	width: 80%;
+	padding:100px;
+}	
+
+.name_producto{
+	padding: 10px;
+	background: #FF0000;	
+}
+
+
+
