@@ -22,22 +22,6 @@ SET time_zone = "+00:00";
 -- Base de datos: `empresa`
 --
 
-DELIMITER $$
---
--- Funciones
---
-CREATE DEFINER=`root`@`localhost` FUNCTION `saludar` (`var1` VARCHAR(150)) RETURNS VARCHAR(150) CHARSET latin1 COLLATE latin1_spanish_ci begin
-	
-	
-	declare mensaje varchar (150);
-	set mensaje='hola';
-	
-	return concat (mensaje,' ',var1);
-	
-	end$$
-
-DELIMITER ;
-
 -- --------------------------------------------------------
 
 --
