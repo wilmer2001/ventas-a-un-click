@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-01-2021 a las 03:23:19
+-- Tiempo de generación: 13-12-2020 a las 21:16:29
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.2
 
@@ -66,6 +66,98 @@ INSERT INTO `almacenamiento` (`lugar_almacenamiento`, `cod_producto`, `producto`
 ('E-543', 320, 'Mayonesa', 490),
 ('D-690', 306, 'Arroz', 500),
 ('D-546', 450, 'Bom Bom Bum', 560);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `cliente_id` int(20) NOT NULL,
+  `nombres` varchar(20) DEFAULT NULL,
+  `Apellidos` varchar(15) DEFAULT NULL,
+  `Direccion` varchar(50) NOT NULL,
+  `Barrio` varchar(20) DEFAULT NULL,
+  `Telefono` bigint(15) DEFAULT NULL,
+  `credito` varchar(10) DEFAULT NULL,
+  `Establecimiento` varchar(20) DEFAULT NULL,
+  `cod_factura` int(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`cliente_id`, `nombres`, `Apellidos`, `Direccion`, `Barrio`, `Telefono`, `credito`, `Establecimiento`, `cod_factura`) VALUES
+(202350, 'Lucia', 'Fernandez', 'Kra 15 92-05', 'San cristobal', 3126852980, 'Si', 'tienda', 2512),
+(213654, 'Pedro', 'Carvajal', 'Cll 25 25-30', 'San isidro', 3000506497, 'no', 'tienda', 1425),
+(230965, 'Juan', 'Bernal', 'Cll 15 29-38', 'Socorro', 3034562197, 'Si', 'Dulceria', 3214),
+(326598, 'Andrea', 'Rodriguez', 'Ave 8 10-25', 'Martires', 3116859745, 'no', 'tienda', 9685),
+(435678, 'Lorena', 'Gomez', 'Ave 9 80-25 SUR', 'Marruecos', 3119876545, 'Si', 'tienda', 9876),
+(456776, 'Maicol', 'Hernandez', 'Kra a14 42-65', 'Molinos', 3986552980, 'Si', 'tienda', 2605),
+(586497, 'Juan', 'Alvarez', 'Cll 5 8-10', 'Carabelas', 3105209080, 'Si', 'Supermecado', 8574),
+(804010, 'Marta', 'Motoa', 'Kra 10 27-35', '20 de Julio', 3206598740, 'no', 'Supermecado', 6352),
+(965841, 'Kevin', 'Torres', 'Cll 23 9-19', 'Consuelo', 3100980040, 'no', 'Supermecado', 2345),
+(987624, 'Anguie', 'Herrera', 'Kra h18 24-95', '20 de Julio', 3287652140, 'no', 'Farmacia', 6523);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `compras`
+--
+
+CREATE TABLE `compras` (
+  `compra_id` int(20) NOT NULL,
+  `proveedor_id` int(20) DEFAULT NULL,
+  `articulo` varchar(20) DEFAULT NULL,
+  `valor` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `compras`
+--
+
+INSERT INTO `compras` (`compra_id`, `proveedor_id`, `articulo`, `valor`) VALUES
+(102, 3274, 'P&G', 34000),
+(109, 1256, 'Fruco', 78000),
+(231, 5041, 'Tomatero', 70000),
+(342, 9405, 'Familia', 45000),
+(432, 4567, 'Pin pong', 65000),
+(456, 8050, 'Viva soya', 52000),
+(498, 7843, 'Q', 40000),
+(567, 2308, 'Surtimax', 68500),
+(624, 3265, 'MK', 54000),
+(789, 6595, 'Roa', 50000);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `detalles_producto`
+--
+
+CREATE TABLE `detalles_producto` (
+  `cod_producto` int(20) NOT NULL,
+  `fecha_caducidad` bigint(20) DEFAULT NULL,
+  `cantidad` int(20) DEFAULT NULL,
+  `valor_producto` int(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `detalles_producto`
+--
+
+INSERT INTO `detalles_producto` (`cod_producto`, `fecha_caducidad`, `cantidad`, `valor_producto`) VALUES
+(106, 30052022, 3, 54000),
+(123, 10052022, 38, 68500),
+(204, 25102021, 2, 70000),
+(250, 10052022, 1, 52000),
+(306, 5122021, 5, 50000),
+(320, 15062023, 79, 78000),
+(450, 30052022, 123, 65000),
+(543, 21102020, 23, 45000),
+(805, 15062023, 5, 34000),
+(908, 25102021, 45, 40000);
 
 -- --------------------------------------------------------
 
@@ -184,135 +276,16 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`nombre`, `cod_producto`, `marca`, `cantidad`, `fecha_caducida`, `valor`, `existencias`) VALUES
-('Aceite 450', 1, 'Viva Soya', 24, '2021-01-28', 3600, 400),
-('Panela pastillada', 2, 'Tomatero', 36, '2021-01-01', 74000, 50),
-('Marcador permanente', 3, 'Pelikan', 12, '2021-01-02', 8200, 100),
-('Kit de reglas', 4, 'Ruler', 10, '2021-01-30', 7200, 100),
-('Regla ', 5, 'Ruler', 10, '2021-01-01', 5000, 100),
-('Esfero ffi esco', 6, 'Offi-esco', 12, '2021-01-06', 5100, 100),
-('Lapiz faber Castell', 7, 'Faber Castell', 12, '2021-01-30', 6500, 100),
-('Lapiz mirado', 8, 'Mirado', 12, '2021-01-04', 6500, 100),
-('Tapabocas ', 9, 'Tapamas', 50, '2021-01-07', 24000, 200),
-('Marcador borrable', 10, 'Pelikan', 12, '2021-01-04', 8200, 100),
-('Shampoo Pantene', 11, 'P&G', 12, '2021-01-26', 6800, 50),
-('Esfero Bic ', 12, 'Bic ', 12, '2021-01-25', 5100, 100),
-('Ariel x450', 14, 'P&G', 24, '2021-01-04', 3600, 100),
-('Ariel X125', 21, 'P&G', 108, '2021-01-05', 1200, 500),
-('Balance normal', 22, 'Balance', 18, '2021-01-02', 9000, 80),
-('HyS azul ', 23, 'P&G', 12, '2021-01-05', 6800, 50),
-('Cepillo niño', 29, 'Tooth', 24, '2021-01-25', 8000, 100),
-('Rexona ', 32, 'Rexona', 48, '2021-01-26', 2000, 200),
-('Panela 1/2', 33, 'Tomatero', 40, '2021-01-30', 48000, 50),
-('Protex', 43, 'Protex', 48, '2021-01-30', 2200, 200),
-('Hys Rosado', 44, 'P&G', 12, '2021-01-20', 6800, 50),
-('Fab X450', 45, 'P&G', 24, '2021-01-29', 3600, 100),
-('Fab 100', 55, 'P&G', 106, '2021-01-06', 1100, 500),
-('Clorox ', 56, 'P&G', 24, '2021-01-07', 22000, 300),
-('Elite duo', 65, 'Elite ', 20, '2021-01-13', 24000, 200),
-('Blancx', 76, 'P&G', 24, '2021-01-25', 24000, 300),
-('Cepillo adulto', 78, 'Tooth', 24, '2021-01-04', 9800, 100),
-('Elite maxi', 89, 'Elite', 24, '2021-01-15', 32000, 100),
-('Azucar morena', 98, 'Incauca', 25, '2021-01-26', 50000, 70),
-('Azucar Morena', 99, 'Incauca ', 25, '2021-01-06', 50000, 70),
-('Advil Max ', 106, 'MK', 40, '2020-10-29', 40000, 200),
-('Bianchi blanco', 111, 'Super', 100, '2021-01-05', 7500, 100),
-('Halls pepa', 112, 'Halls ', 100, '2021-01-11', 8000, 100),
-('Nosootras Normal Dispensa', 113, 'Nosotras', 30, '2021-01-04', 9000, 100),
-('Barrilete ', 116, 'Super', 50, '2021-01-20', 5200, 100),
-('Halls barra', 118, 'Halls', 12, '2021-01-07', 10800, 50),
-('Bianchi barra', 119, 'Super', 12, '2021-01-23', 7800, 100),
-('Atun aceite ', 123, 'Soberana', 200, '2020-10-14', 4200, 100),
-('Super coco ', 124, 'Super', 100, '2021-01-30', 6500, 100),
-('Bianchi azul', 125, 'Super', 100, '2021-01-10', 7500, 100),
-('Dulce lokiño', 127, 'Super', 100, '2021-01-11', 7000, 100),
-('Color grande', 128, 'Norma', 12, '2021-01-26', 2600, 100),
-('Big ben ', 129, 'Super', 100, '2021-01-13', 8000, 100),
-('Bisturi pequeño', 202, '--', 12, '2021-01-19', 10400, 100),
+('Advil', 106, 'MK', 40, '2020-10-29', 54000, 200),
+('Atun', 123, 'Surtimax', 38, '2020-10-14', 68500, 97),
 ('Panela petaca', 204, 'Tomatero', 40, '2020-09-30', 70000, 100),
-('Chocobrey', 222, 'Super', 50, '2021-01-28', 5500, 100),
-('Chocobrey blanco', 223, 'Super', 50, '2021-01-31', 5500, 100),
-('Nosotras rapigel Dispensa', 224, 'Nosotras', 30, '2021-01-06', 9000, 100),
-('Oka loka fusion', 225, 'Super', 12, '2021-01-07', 6200, 100),
-('Axion-235', 227, 'Axion', 48, '2021-01-02', 2000, 200),
-('Chocoprispi', 228, 'Kelogs', 8, '2021-01-06', 6800, 100),
-('Zucaritas', 229, 'Keloggs', 8, '2021-01-06', 6800, 50),
-('Advil ultra', 233, 'MK', 40, '2021-01-05', 48000, 200),
-('Color pequeño', 234, 'Norma', 12, '2021-01-04', 1300, 100),
-('Cartulina 1/2', 235, '--', 25, '2021-01-06', 7800, 100),
-('Aceite 900', 250, 'Viva soya', 12, '2020-10-02', 5800, 80),
-('Tajalapiz metalico ', 256, 'Noorma', 24, '2021-01-06', 4200, 100),
-('Bisturi Grande', 303, '--', 12, '2021-01-23', 4800, 100),
-('Arroz', 306, 'Roa', 25, '2020-10-14', 50000, 200),
-('Silicona delgada', 312, '---', 20, '2021-01-27', 11800, 100),
-('Mayonesa', 320, 'Fruco', 12, '2020-11-13', 10000, 120),
-('Chocolores blanco', 321, 'Super', 12, '2021-01-06', 8000, 80),
-('Cera amarilla', 326, 'Ceramas', 48, '2021-01-26', 1200, 300),
-('BombrilX16', 331, 'Bombril', 16, '2021-01-04', 3600, 200),
-('Oka loka chicle', 333, 'Super', 12, '2021-01-27', 6200, 100),
-('Rosal X54', 334, 'Rosal', 54, '2021-01-04', 40000, 200),
-('Fabuloso ', 338, 'Fabuloso', 72, '2021-01-01', 1050, 400),
-('Aromatel', 339, 'Aromatel', 48, '2021-01-31', 900, 300),
-('Tajalapiz depsito', 342, 'Norma', 24, '2021-01-27', 6400, 100),
-('Plumones', 356, 'Norma', 12, '2021-01-31', 2800, 100),
-('Block cuadriculado', 357, 'Norma', 80, '2021-01-30', 2400, 100),
-('Vanix blanco tira', 432, 'Vanix', 48, '2021-01-02', 10200, 100),
-('Palillos redondos', 435, '---', 12, '2021-01-05', 4800, 100),
-('Sampic', 441, 'Sampic', 48, '2021-01-26', 900, 300),
-('Kotex dispen', 443, 'Kotex', 30, '2021-01-07', 8000, 200),
-('Frop loops', 444, 'Keloggs', 8, '2021-01-06', 6800, 100),
-('Axion-150', 446, 'Axion', 72, '2021-01-30', 1200, 200),
-('Atun agua', 450, 'Soberana', 48, '2020-10-19', 4600, 200),
-('Cartulina Pliego', 456, '--', 25, '2021-01-30', 13600, 100),
-('Micropunta ', 476, 'Norma', 12, '2021-01-04', 9600, 100),
-('SipegaX18', 505, 'Sipega', 18, '2021-01-21', 12600, 100),
-('Elite maxi', 543, 'Elite', 24, '2020-10-26', 24000, 200),
-('Axion-disco', 554, 'Axion', 24, '2021-01-01', 16000, 100),
-('Trululu sabores', 555, 'Super', 12, '2021-01-31', 6800, 100),
-('Cera roja', 557, 'Ceramas', 48, '2021-01-07', 1200, 300),
-('SoflanX210', 559, 'Soflan ', 48, '2021-01-04', 1000, 300),
-('SipegaX24', 606, 'Sipega', 24, '2021-01-13', 9600, 100),
-('Borrador grande', 657, 'Borramas', 24, '2021-01-05', 7500, 100),
-('Chao X100', 666, 'Super', 100, '2021-01-02', 6000, 100),
-('Scoot maxi', 667, 'Scoot', 30, '2021-01-08', 36000, 100),
-('Papel Craft', 707, '--', 25, '2021-01-24', 1900, 100),
-('Hoja examen', 770, 'Norma', 25, '2021-01-27', 5800, 100),
-('Sabra doble espuma ', 775, 'Sabra', 24, '2021-01-04', 6000, 200),
-('Chao linea', 777, 'Super', 24, '2021-01-13', 6000, 100),
-('Vanix color shashet', 778, 'Vanix', 48, '2021-01-04', 10200, 100),
-('Tapabocas-Niño ', 779, 'Tapamas', 50, '2021-01-04', 30000, 200),
-('Block iris', 784, 'Norma', 80, '2021-01-07', 800, 100),
-('Cuaderno X100', 789, 'Norma', 100, '2021-01-02', 1100, 1000),
-('Jabon Rey', 805, 'P&G', 25, '0000-00-00', 34000, 100),
-('Hoja de vida', 870, 'Norma', 25, '2021-01-04', 6500, 100),
-('Borrador pequeño', 879, 'Borramas', 24, '2021-01-30', 3600, 100),
-('Balance crema hombre', 908, 'Balance', 18, '2020-09-26', 9800, 90),
-('Papel periodico', 909, '--', 25, '2021-01-16', 2600, 100),
-('Ibuprofeno', 955, 'Genfar', 48, '2021-01-29', 8700, 80),
-('Uva pasa grande', 961, 'Variedades', 30, '2021-01-25', 28000, 80),
-('Ibuprofeno ', 966, 'MK', 24, '2021-01-04', 9000, 100),
-('Canela Grande ', 970, 'Variedades', 30, '2021-01-20', 25000, 100),
-('Canela Mediana', 971, 'Variedades', 80, '2021-01-06', 18000, 80),
-('Miel mediana', 974, 'Variedades', 80, '2021-01-05', 18000, 60),
-('Calmidol compuesto ', 978, 'Calmidol', 48, '2021-01-22', 26000, 50),
-('Buscapina Fem', 979, 'Buscapina', 24, '2021-01-31', 31000, 50),
-('Buscapina compuesta', 980, 'Buscapina', 30, '2021-01-01', 31000, 50),
-('Sardina cilindrica', 981, 'Soberana ', 48, '2021-01-06', 2600, 70),
-('Sardina', 982, 'Soberana', 48, '2021-01-12', 5400, 80),
-('Maizena sabores', 983, 'Maizena', 12, '2021-01-24', 900, 50),
-('Bom bom bun', 984, 'Colombina', 25, '2021-01-06', 6800, 50),
-('Gomas surtidas', 985, 'Super', 25, '2021-01-27', 26400, 50),
-('Galleta oreo ', 986, 'Super', 25, '2021-01-05', 7000, 50),
-('Cuaderno X50', 987, 'Norma', 50, '2021-01-31', 650, 1000),
-('Galleta club social', 988, 'Colombina', 10, '2021-01-25', 6000, 60),
-('Trident X60', 989, 'Colombina', 60, '2021-01-06', 12000, 60),
-('Trident X24', 990, 'Colombina', 24, '2021-01-25', 9800, 40),
-('Trident X18', 991, 'Colombina', 18, '2021-01-04', 12000, 30),
-('Bubaloo', 992, 'Colombina', 100, '2021-01-04', 5700, 100),
-('Tumix', 993, 'Super', 100, '2021-01-06', 6900, 100),
-('Xtime', 995, 'Colombina', 100, '2021-01-27', 6000, 50),
-('Trululu aros', 996, 'Super', 100, '2021-01-07', 7500, 50),
-('Trululu piramidal', 997, 'Super', 100, '2021-01-27', 10300, 40),
-('Goma chocolores', 998, 'Super', 12, '2021-01-06', 8000, 40);
+('Aceite', 250, 'Viva soya', 48, '2020-10-02', 52000, 80),
+('Arroz', 306, 'Roa', 25, '2020-10-14', 50000, 50),
+('Mayonesa', 320, 'Fruco', 79, '2020-11-13', 78000, 120),
+('Bom Bom Bum', 450, 'Pin pong', 123, '2020-10-19', 65000, 80),
+('Papel Higuienico', 543, 'Familia', 23, '2020-10-26', 45000, 23),
+('Jabon Rey', 805, 'P&G', 25, '2020-10-24', 34000, 60),
+('Yodora D.', 908, 'Q', 45, '2020-09-26', 40000, 90);
 
 -- --------------------------------------------------------
 
@@ -415,6 +388,26 @@ ALTER TABLE `almacenamiento`
   ADD KEY `cod_producto` (`cod_producto`);
 
 --
+-- Indices de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`cliente_id`),
+  ADD KEY `cod_factura` (`cod_factura`);
+
+--
+-- Indices de la tabla `compras`
+--
+ALTER TABLE `compras`
+  ADD PRIMARY KEY (`compra_id`) USING BTREE,
+  ADD KEY `proveedor_id` (`proveedor_id`);
+
+--
+-- Indices de la tabla `detalles_producto`
+--
+ALTER TABLE `detalles_producto`
+  ADD PRIMARY KEY (`cod_producto`);
+
+--
 -- Indices de la tabla `empleados`
 --
 ALTER TABLE `empleados`
@@ -474,10 +467,22 @@ ALTER TABLE `almacenamiento`
   ADD CONSTRAINT `almacenamiento_ibfk_2` FOREIGN KEY (`cod_producto`) REFERENCES `productos` (`cod_producto`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
+-- Filtros para la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`cod_factura`) REFERENCES `facturas` (`cod_factura`) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+--
 -- Filtros para la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
   ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`proveedor_id`) REFERENCES `provedores` (`provedor_id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`cod_producto`) REFERENCES `detalles_producto` (`cod_producto`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `reparticion`
@@ -490,6 +495,7 @@ ALTER TABLE `reparticion`
 -- Filtros para la tabla `ventas`
 --
 ALTER TABLE `ventas`
+  ADD CONSTRAINT `ventas_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `clientes` (`cliente_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
   ADD CONSTRAINT `ventas_ibfk_2` FOREIGN KEY (`cod_factura`) REFERENCES `facturas` (`cod_factura`) ON DELETE NO ACTION ON UPDATE CASCADE;
 COMMIT;
 
