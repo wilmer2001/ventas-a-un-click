@@ -4,218 +4,151 @@
 <title>Ventas a un click</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
-  background-color: red;
-  padding: 15px;
-  text-align: center;
-  font-size: 25px;
-  color: white;
-}
-
-  .boton_personalizado{
-    text-decoration: none;
-    padding: 8px;
-    font-weight: 600;
-    font-size: 15px;
-    color: red;
-    background-color:white ;
-    
-  }
-
-nav {
-  float: left;
-  width: 15%;
-  height: 1200px; 
-  background: #ccc;
-  font: red;
-  padding: 10px;
-}
-.boton{
-  float: left;
-  width: 10%;
-  height: 50%;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-.container{
-  margin: auto;
-  background-color: white;
-  width: 800px;
-  padding: 30px;
-}
-
-ul, li {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-ul.slider{
-  position: relative;
-  width: 750px;
-  height: 300px;
-}
-
-ul.slider li {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    opacity: 0;
-    width: inherit;
-    height: inherit;
-    transition: opacity .5s;
-    background:lightgrey;
-}
-
-ul.slider li img{
-  width: 70%;
-  height: 300px;
-  object-fit: cover;
-}
-
-ul.slider li:first-child {
-    opacity: 1; 
-}
-
-ul.slider li:target {
-    opacity: 1; 
-}
-
-.menu{
-  text-align: center;
-  margin: 10px;
-}
-
-.menu li{
-  display: inline-block;
-  text-align: center;
-}
-
-.menu li a{
-  display: inline-block;
-  color: grey;
-  text-decoration: none;
-  background-color: lightgrey;
-  padding: 10px;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  border-radius: 100%;
-}
-    .social{
-      width:48px;
-      position:fixed;
-      top:50px;
-      right:0;
-    }
-
-    .social{
-      top:50%;
-      height:205px;
-      margin-top:-100px;
-    }
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  height: 1000px; 
-}
-
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/estilos.css">
 </head>
 <body>
 <header>
-<div class="boton">
-<a class="boton_personalizado" href="">Ingresar</a><a class="boton_personalizado" href="">Registrar</a>
-</div>
-  <img src="https://previews.123rf.com/images/asmati/asmati1610/asmati161000043/63402497-mano-haga-clic-en-el-bot%C3%B3n-el-icono-blanco-en-el-c%C3%ADrculo-rojo-.jpg" width="50" height="50" align="right" ></div>
-<h2>Ventas a un click</h2>
-<a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/index">Inicio</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/producto1">Productos</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/buzon1">Buzon de emergencia</a><a class="boton_personalizado" href="http://localhost/ventas-a-un-click/codigo/empresa">Perfil de la empresa</a>
+  <div class="nav">
+      <h3>VENTAS A UN CLICK <img src="../img/logo.png" width="50" height="50"></h3></img>
+  <ul class="nav">
+  <p align="center"><input type="search" id="input-search" placeholder="Buscar aqui">
+        <br>
+      </p>
+  <h5><p align="right">Mi carrito</a></h5></p>
+            <div class="img">
+                <li><img src="../img/carrito.jpg" width="55" height="55">
+      </img>
+    </div>
+        <h5>
+          <div class="nav2">
+        <li><a href="http://localhost/ventas-a-un-click/codigo/index.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspINICIO&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+
+        <li><a href="http://localhost/ventas-a-un-click/codigo/producto1.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCATEGORIAS&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+
+        <ul>
+        <p align="left"><a href="http://localhost/ventas-a-un-click/codigo/canasta-familiar.html">Canasta Familiar&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+        <a href="http://localhost/ventas-a-un-click/codigo/escolar.html">Escolar&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+        <a href="http://localhost/ventas-a-un-click/codigo/dulceria.html">Dulceria&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+        <a href="http://localhost/ventas-a-un-click/codigo/limpieza.html">Limpieza&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></p>
+
+        </ul>
+</li>
+        <li><a href="http://localhost/ventas-a-un-click/codigo/buzon1.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBUZON DE SUGERENCIAS&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+        
+        <li><a href="http://localhost/ventas-a-un-click/codigo/empresa.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPERFIL DE LA EMPRESA&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+        <li><a href="http://localhost/ventas-a-un-click/codigo/ofertas.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOFERTAS&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+     
+</h5>
+    </div>
 </header>
-<section>
-  <nav>
-    <ul>
-      <li><H1> PRODUCTOS </H1></li>
-      <li>Los productos que manejamos son 100% colombianos, de excelente calidad, buen precio, teniendo como base unos grandes proovedores que siempre nos abastecen de muy buenos productos.</li>
-      <li><a href="#"><img src="https://telemedellin.tv/wp-content/uploads/2018/08/IVA.jpg" width="80" height="80"></a></li>
-      <li></li>
-    </ul>
-  </nav>
-  <article>
-  <div class="container"><center>
-  <ul class="slider">
-    <li id="slide1">
-      <img src="https://image.slidesharecdn.com/productosdelacanastafamiliar-101118233934-phpapp01/95/productos-de-la-canasta-familiar-1-638.jpg?cb=1422673298"/>
-    </li>
-    <li id="slide2">
-      <img src="https://previews.123rf.com/images/dilendom/dilendom1708/dilendom170800150/84219515-un-conjunto-de-art%C3%ADculos-de-papeler%C3%ADa-para-escolares-productos-para-la-creatividad-y-el-estudio.jpg"/>
-    </li>
-    <li id="slide3">
-      <img src="https://dulceriaelcompadre.com/imgs/Categorias/nacionales_comprimido.jpg"/>
-    </li>
-    <li id="slide4">
-      <img src="https://3.bp.blogspot.com/-97Z5R998O18/T5pb6JezdxI/AAAAAAAAAEg/epJXCZFfbnw/s1600/productos_limpieza.jpg"/>
-    </li>
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="../img/slider1.png" alt="Chania">
+        <div class="carousel-caption">
+          <h3>Canasta Familiar</h3>
+          <p>Productos de canasta familiar a buen precio y excelente calidad. </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="../img/slider2.png" alt="Chania">
+        <div class="carousel-caption">
+          <h3>Mercados</h3>
+          <p>Gran variedad de productos a excelente precio. </p>
+        </div>
+      </div>
     
-  </ul>
-  
-  <ul class="menu">
-    <li>
-      <a href="#slide1">1</a>
-    </li>
-    <li>
-      <a href="#slide2">2</a>
-    </li>
-     <li>
-      <a href="#slide3">3</a>
-    </li>
-    <li>
-      <a href="#slide4">4</a>
-    </li>
-  </ul>
-  </center>
+      <div class="item">
+        <img src="../img/slider3.jpg" alt="Flower">
+        <div class="carousel-caption">
+          <h3>Escolar</h3>
+          <p>Gran remate de productos escolares</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="../img/slider4.jpg" alt="Flower">
+        <div class="carousel-caption">
+          <h3>Dulceria</h3>
+          <p>Variedad de Dulces y Paquetes</p>
+        </div>
+      </div>
+   <div class="item">
+        <img src="../img/slider5.jpg" alt="Flower">
+        <div class="carousel-caption">
+          <h3>Limpieza</h3>
+          <p>Productos de Aseo y Higuene. </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
-    <h1>Descripcion</h1>
-    <p>Brindamos la compra de productos de la canasta familiar, papeleria, dulceria, entre muchos productos mas a todo tipo de empresa ya sea tienda de barrio o grandes supermecados.</p>
-    <center><img src="https://www.elheraldo.co/sites/default/files/styles/width_860/public/articulo/2017/08/09/archivo.jpg?itok=_NmqTQQF" width="250" height="250"></center>
-    <h1>Objetivo</h1>
-    <p>Nuestro objetivo principal es incrementar un 10% las ventas a nuestra empresa, a traves de nuestro aplicativo web que facilita y controla la toma de los pedidos.</p>
-    <center><img src="https://actioncoachiberoamerica.com/wp-content/uploads/2018/12/Joaquin_Pardave-767x430.jpg" width="250" height="250"></center>
-  </article>
+<br>
+<br>
+  <div class="row">
+    <div class="col-sm-4">
+      <h1><center><font color="red">Descripcion</font></center></h1><br>
+    <p>&nbspBrindamos la compra de productos de la canasta familiar, papeleria, &nbspdulceria,entre muchos productos mas,a todo tipo de empresa ya &nbspsea tienda de barrio o grandes supermecados.</p>
+    <br>
+    <p align="center"><img src="../img/menu.jpg" width="350" height="250"></center>
+    </div>
+    <div class="col-sm-4">
+   <h1><center><font color="red">Objetivo</font></center></h1><br>
+    <p>Nuestro objetivo principal es incrementar un 10% las ventas a nuestra empresa, a traves de nuestro aplicativo web, que facilita y controla la toma de los pedidos.</p><br>
+    <p align="center"><img src="../img/menu3.jpeg" width="350" height="250"></center>
+    </div>
+    <div class="col-sm-4">
+    <h1><center><font color="red">Clientes</h1></center></font><br>
+    <p>Nuestro cliente son los mas importantes en nuestra empresa, por eso siempre los atenderemos de la mejor manera posible y siembre con respeto. </p>
+    <p align="center"><img src="../img/menu2.jpg" width="365" height="265"></p>
+    </div>
+  </div>
+    <br><br><br>
+  <div class="row">   
+    <div class="col-sm-6">
+    <h1><center><font color="red">MISION</font></center></h1><br>
+    <p><center>Expandirse por toda la ciudad de Bogota.</center></p>
+    <br>
+    <p align="center"><img src="../img/menu6.jpg" width="350" height="250"></center>
+    </div>
+    <div class="col-sm-6">
+    <h1><center><font color="red">VISION</font></center></h1><br>
+    <p><center>Poder abrir distintas rutas por toda la ciudad.</center></p>
+    <br>
+    <p align="center"><img src="../img/menu7.png" width="350" height="250"></center>
+    </div>
+    </div>
+    <br>
+    <br>
   <div class="container">
   </div>
-
+</center>
   <div class="social">
     <li><a href="#"><img src="https://www.facebook.com/images/fb_icon_325x325.png" width="30" height="30" alt="facebook"></li></a>
     <li><a href="#"><img src="https://i.blogs.es/5471fd/youtube/840_560.jpg" width="30" height="30" alt="youtube"></a></li>
