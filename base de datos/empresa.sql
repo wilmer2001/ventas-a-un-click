@@ -51,7 +51,6 @@ INSERT INTO `almacenamiento` (`lugar_almacenamiento`, `cod_producto`, `producto`
 ('D-690', 306, 'Arroz', 500),
 ('D-546', 450, 'Bom Bom Bum', 560);
 
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `empleados`
